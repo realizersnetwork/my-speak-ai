@@ -1,0 +1,42 @@
+{
+  "name": "my-speak-ai",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "lint": "eslint .",
+    "test:unit": "vitest",
+    "test": "npm run test:unit -- --run",
+    "nest:dev": "npm --prefix nest-api run start:dev",
+    "nest:install": "npm --prefix nest-api install",
+    "chat:dev": "npm --prefix chatbot-ui run dev",
+    "chat:install": "npm --prefix chatbot-ui install"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@sveltejs/adapter-vercel": "^6.3.3",
+    "@sveltejs/kit": "^2.63.0",
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/node": "^24",
+    "@vitest/browser-playwright": "^4.1.8",
+    "dotenv": "^18.0.0",
+    "eslint": "^10.4.1",
+    "eslint-plugin-svelte": "^3.19.0",
+    "globals": "^17.6.0",
+    "playwright": "^1.60.0",
+    "svelte": "^5.56.1",
+    "tailwindcss": "^4.3.0",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.8",
+    "vitest-browser-svelte": "^2.1.1"
+  },
+  "dependencies": {
+    "openai": "^7.18.0",
+    "vercel": "^59.23.1"
+  }
+}

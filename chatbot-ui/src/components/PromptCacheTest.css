@@ -1,0 +1,104 @@
+/*
+ * PromptCacheTest.tsx 전용 스타일.
+ * 캐시 시험 페이지의 설명·입력·usage 결과 카드를 꾸밉니다.
+ */
+
+.cache-page {
+	/* 가로가 너무 넓지 않게 (읽기 좋은 폭) */
+	width: min(720px, 100%);
+	color: #fff;
+}
+
+.cache-page h1 {
+	margin: 0 0 0.5rem;
+	font-size: 1.35rem;
+}
+
+/* 성공 조건 안내 문단 — 본문보다 살짝 흐리게 */
+.cache-help {
+	margin: 0 0 1rem;
+	font-size: 0.9rem;
+	color: #bbb;
+	line-height: 1.45;
+}
+
+/* 본문 안 code(cached_tokens) — 보라로 강조 */
+.cache-help code {
+	color: #a29bfe;
+}
+
+.cache-box {
+	padding: 1.1rem;
+	border: 1px solid #555;
+	border-radius: 10px;
+	background: #1e1e1e;
+}
+
+.cache-box textarea {
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid #555;
+	border-radius: 6px;
+	background: #000;
+	color: #fff;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+.cache-box button {
+	display: block;
+	margin: 0.75rem auto 0;
+	padding: 0.5rem 1.4rem;
+	border: 1px solid #777;
+	border-radius: 6px;
+	background: #333;
+	color: #fff;
+	cursor: pointer;
+}
+
+.cache-box button:disabled {
+	opacity: 0.5;
+}
+
+/* 오류 — 연한 빨강 */
+.cache-error {
+	color: #ff8a80;
+	font-size: 0.9rem;
+}
+
+/* 호출 결과 한 블록 — 위 테두리로 이전 결과와 구분 */
+.cache-result {
+	margin-top: 1rem;
+	padding-top: 0.75rem;
+	border-top: 1px solid #444;
+}
+
+.cache-result h2 {
+	margin: 0 0 0.4rem;
+	font-size: 1rem;
+}
+
+/* usage JSON — 검은 박스 + 가로 스크롤 (긴 줄 대비) */
+.cache-usage {
+	margin: 0;
+	padding: 0.75rem;
+	background: #000;
+	border-radius: 6px;
+	font-size: 0.85rem;
+	overflow-x: auto;
+}
+
+/* cached_tokens 성공 표시 — 초록 */
+.cache-ok {
+	margin: 0.4rem 0;
+	color: #55efc4;
+	font-weight: 600;
+}
+
+/* 답 미리보기 — 본문보다 살짝 작게 */
+.cache-content {
+	margin: 0.4rem 0 0;
+	font-size: 0.85rem;
+	color: #ddd;
+	line-height: 1.45;
+}

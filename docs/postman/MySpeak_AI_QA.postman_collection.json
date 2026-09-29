@@ -1,0 +1,60 @@
+{
+	"info": {
+		"name": "My Speak AI OpenAI Final",
+		"description": "Prompt Caching · Streaming · RAG · Chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{ "key": "nestUrl", "value": "http://localhost:3000" }
+	],
+	"item": [
+		{
+			"name": "POST OpenAI prompt-cache (1st)",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Content-Type", "value": "application/json" }],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"한국에 대해 아는 게 많아?\"\n}"
+				},
+				"url": "{{nestUrl}}/openai/prompt-cache"
+			}
+		},
+		{
+			"name": "POST OpenAI prompt-cache (2nd - check cached_tokens)",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Content-Type", "value": "application/json" }],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"한국 역사에 대해 짧게 알려줘\"\n}"
+				},
+				"url": "{{nestUrl}}/openai/prompt-cache"
+			}
+		},
+		{
+			"name": "POST OpenAI chat (RAG)",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Content-Type", "value": "application/json" }],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"데이터베이스 격리수준에 대해서 알려줘\",\n  \"conversationId\": \"conv_demo\"\n}"
+				},
+				"url": "{{nestUrl}}/openai/chat"
+			}
+		},
+		{
+			"name": "POST OpenAI chat/stream",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Content-Type", "value": "application/json" }],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"안녕 한국에 대해서 알려줘\"\n}"
+				},
+				"url": "{{nestUrl}}/openai/chat/stream"
+			}
+		}
+	]
+}

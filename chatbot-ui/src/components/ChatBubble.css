@@ -1,0 +1,51 @@
+/*
+ * ChatBubble.tsx 말풍선 모양.
+ * 사용자=왼쪽 흰 박스, 봇=오른쪽 보라 박스 (표본 채팅 UI).
+ */
+
+.bubble-row {
+	/* 한 메시지 줄 — 가로 전체, 말풍선을 왼쪽/오른쪽으로 밀어 둠 */
+	display: flex;
+	width: 100%;
+	/* 말풍선끼리 세로 간격 */
+	margin-bottom: 0.85rem;
+}
+
+/* 사용자: 왼쪽 정렬 */
+.bubble-row.user {
+	justify-content: flex-start;
+}
+
+/* 봇: 오른쪽 정렬 */
+.bubble-row.bot {
+	justify-content: flex-end;
+}
+
+.bubble {
+	/* 너무 길면 줄바꿈 — 화면의 약 78%·최대 420px까지만 넓어지게 */
+	max-width: min(78%, 420px);
+	padding: 0.75rem 1rem;
+	border-radius: 1rem;
+	font-size: 0.95rem;
+	line-height: 1.45;
+	/* 긴 단어·URL도 박스 밖으로 안 나가게 끊음 */
+	word-break: break-word;
+	/* 메시지에 줄바꿈(\n)이 있으면 그대로 보이게 */
+	white-space: pre-wrap;
+}
+
+/* 표본: 사용자 — 왼쪽 흰 말풍선 */
+.bubble-user {
+	background: #ffffff;
+	color: #1a1a1a;
+	/* 왼쪽 아래만 덜 둥글게 — “꼬리” 느낌 */
+	border-bottom-left-radius: 0.35rem;
+}
+
+/* 표본: 봇 — 오른쪽 보라 말풍선 */
+.bubble-bot {
+	background: #6c5ce7;
+	color: #ffffff;
+	/* 오른쪽 아래만 덜 둥글게 — 봇 쪽 꼬리 느낌 */
+	border-bottom-right-radius: 0.35rem;
+}

@@ -1,0 +1,54 @@
+/*
+ * App.tsx 전용 스타일.
+ * 앱 바깥 배경과 상단 탭 버튼 모양을 정합니다.
+ */
+
+.app {
+	/* 화면 세로를 꽉 채움 (작은 폰에서도 배경이 중간에 끊기지 않게) */
+	min-height: 100dvh;
+	/* 세로로 쌓기: 위=탭, 아래=선택한 페이지 */
+	display: flex;
+	flex-direction: column;
+	/* 가로 가운데 정렬 */
+	align-items: center;
+	/* 위쪽부터 배치 (세로 가운데가 아님) */
+	justify-content: flex-start;
+	/* 가장자리 여백 — 탭·콘텐츠가 화면 끝에 붙지 않게 */
+	padding: 0.75rem 1rem 1.5rem;
+	/* padding이 너비 계산에 포함되게 (넘침 방지) */
+	box-sizing: border-box;
+	/* 어두운 바탕 — 챗봇 카드가 잘 보이게 */
+	background: #121212;
+}
+
+.app-nav {
+	/* 탭 버튼 가로 나열 */
+	display: flex;
+	/* 버튼 사이 간격 */
+	gap: 0.5rem;
+	/* 탭과 아래 콘텐츠 사이 여백 */
+	margin-bottom: 0.75rem;
+	/* 좁은 화면에서 버튼이 다음 줄로 넘어가게 */
+	flex-wrap: wrap;
+	/* 여러 줄이어도 가운데 정렬 */
+	justify-content: center;
+}
+
+.app-nav button {
+	/* 손가락·마우스로 누르기 쉬운 크기 */
+	padding: 0.45rem 0.9rem;
+	border: 1px solid #444;
+	/* 알약(둥근) 모양 — 탭처럼 보이게 */
+	border-radius: 999px;
+	background: #1e1e1e;
+	color: #ccc;
+	cursor: pointer;
+	font-size: 0.85rem;
+}
+
+/* 선택된 탭: 보라색으로 “지금 여기”를 표시 */
+.app-nav button.active {
+	background: #6c5ce7;
+	border-color: #6c5ce7;
+	color: #fff;
+}

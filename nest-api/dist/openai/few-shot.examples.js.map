@@ -1,0 +1,1 @@
+{"version":3,"file":"few-shot.examples.js","sourceRoot":"","sources":["../../src/openai/few-shot.examples.ts"],"names":[],"mappings":";;;AAKa,QAAA,iBAAiB,GAA6C;IAC1E;QACC,IAAI,EAAE,MAAM;QACZ,OAAO,EAAE,WAAW;KACpB;IACD;QACC,IAAI,EAAE,WAAW;QACjB,OAAO,EACN,0FAA0F;KAC3F;IACD;QACC,IAAI,EAAE,MAAM;QACZ,OAAO,EAAE,UAAU;KACnB;IACD;QACC,IAAI,EAAE,WAAW;QACjB,OAAO,EACN,mFAAmF;KACpF;CACD,CAAC"}

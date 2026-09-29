@@ -1,0 +1,41 @@
+/*
+ * 앱 전역 기본 스타일.
+ * 개별 페이지(ChatView 등)보다 먼저 적용되는 글꼴·배경·박스 계산 규칙입니다.
+ */
+
+:root {
+	/* 읽기 쉬운 기본 글꼴 (Windows·Mac 공통에 가깝게) */
+	font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+	/* 줄 간격 — 본문이 답답하지 않게 */
+	line-height: 1.5;
+	font-weight: 400;
+	/* 기본 글자색 흰색 — 어두운 배경 위 */
+	color: #fff;
+	/* 페이지 전체 어두운 바탕 */
+	background-color: #121212;
+	/* 굵기 자동 보정 끄기 — 글자 두께가 브라우저마다 다르게 변하지 않게 */
+	font-synthesis: none;
+	/* 글자 윤곽을 더 또렷하게 */
+	text-rendering: optimizeLegibility;
+	/* macOS/iOS Safari에서 글자 가장자리 부드럽게 */
+	-webkit-font-smoothing: antialiased;
+}
+
+* {
+	/* padding·border가 width에 포함되게 — 레이아웃 넘침 줄임 */
+	box-sizing: border-box;
+}
+
+body {
+	/* 브라우저 기본 바깥 여백 제거 */
+	margin: 0;
+	/* 아주 좁은 화면에서도 최소 폭 확보 */
+	min-width: 320px;
+	/* 세로로 최소한 화면 높이만큼 */
+	min-height: 100vh;
+}
+
+#root {
+	/* React가 붙는 루트도 화면 세로를 채움 (dvh: 모바일 주소창 변화 반영) */
+	min-height: 100dvh;
+}
